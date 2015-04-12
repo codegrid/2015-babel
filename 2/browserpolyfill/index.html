@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+</head>
+<body>
+  <ul>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+  </ul>
+  <script src="../../lib/demologger.min.js"></script>
+  <script>
+    new DemoLogger();
+    console.log(Array.from);
+  </script>
+  <script src="../../lib/browser-polyfill.js"></script>
+  <script>
+    console.log(Array.from);
+    var items = document.querySelectorAll('li');
+    items = Array.from(items);
+    items.forEach(function(item) {
+      console.log(item.textContent);
+    });
+  </script>
+</body>
+</html>

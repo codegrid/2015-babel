@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+</head>
+<body>
+  <script src="../../lib/demologger.min.js"></script>
+  <script>
+    new DemoLogger();
+  </script>
+  <script src="../../lib/browser.js"></script>
+  <script type="text/babel">
+    class App {
+      constructor(name) {
+        this.name = name;
+      }
+      showName() {
+        console.log(this.name);
+      }
+    }
+    var app = new App('nakajmg');
+    app.showName();
+  </script>
+</body>
+</html>
